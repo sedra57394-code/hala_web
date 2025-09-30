@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الفعالية - أسبوع المدينة</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="aseets/css/style.css">
+</head>
+
+<body>
+    <!-- رأس الصفحة -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fa-solid fa-city me-2 text-primary"></i>
+                    أسبوع المدينة
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- قسم تفاصيل الفعالية -->
+    <section class="event-details py-5">
+        <div class="container">
+            <div id="eventDetails">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <img id="eventImage" src="" alt="صورة الفعالية" class="img-fluid rounded mb-4 w-100">
+
+                        <h1 id="eventTitle" class="mb-3">عنوان الفعالية</h1>
+
+                        <div class="event-meta mb-4">
+                            <div class="row">
+                                <div class="col-md-4 mb-2">
+                                    <strong><i class="far fa-calendar-alt me-2"></i>التاريخ:</strong>
+                                    <span id="eventDate" class="text-muted">-</span>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <strong><i class="fas fa-map-marker-alt me-2"></i>الموقع:</strong>
+                                    <span id="eventLocation" class="text-muted">-</span>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <strong><i class="fas fa-tag me-2"></i>التصنيف:</strong>
+                                    <span id="eventCategory" class="badge bg-primary">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-description mb-4">
+                            <h3>عن الفعالية</h3>
+                            <p id="eventDescription" class="lead">وصف الفعالية سيظهر هنا...</p>
+                        </div>
+
+                        <!-- خريطة ثابتة -->
+                        <div class="event-map mb-4">
+                            <h3>الموقع على الخريطة</h3>
+                            <div class="bg-light rounded p-2">
+                                <div class="ratio ratio-16x9">
+                                    <iframe id="eventMap" src="" style="border:0;" allowfullscreen loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- معرض الصور -->
+                        <div class="event-gallery-section mb-4">
+                            <h3>معرض الصور</h3>
+                            <div class="event-gallery">
+                                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=70"
+                                    alt="صورة 1" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                                <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=600&q=70"
+                                    alt="صورة 2" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=70"
+                                    alt="صورة 3" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="event-actions card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">إجراءات سريعة</h5>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" id="addToCalendar">
+                                        <i class="far fa-calendar-plus me-2"></i>أضف إلى التقويم
+                                    </button>
+                                    <button class="btn btn-outline-primary" id="shareEvent">
+                                        <i class="fas fa-share-alt me-2"></i>شارك الفعالية
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-info card">
+                            <div class="card-body">
+                                <h5 class="card-title">معلومات إضافية</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <strong>المدة:</strong>
+                                        <span class="text-muted">3 ساعات</span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>الفئة العمرية:</strong>
+                                        <span class="text-muted">جميع الأعمار</span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>التكلفة:</strong>
+                                        <span class="text-muted">مجاني</span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <strong>اللغة:</strong>
+                                        <span class="text-muted">العربية</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الفعاليات ذات الصلة -->
+    <section class="related-events py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">فعاليات ذات صلة</h2>
+            <div class="row" id="relatedEvents">
+                <!-- سيتم ملؤها ديناميكياً بـ JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>دليل الفعاليات</h5>
+                    <p>منصة شاملة لاكتشاف أفضل الفعاليات في مدينتك.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">الرئيسية</a></li>
+                        <li><a href="events.html" class="text-light">الفعاليات</a></li>
+                        <li><a href="about.html" class="text-light">عن الدليل</a></li>
+                        <li><a href="contact.html" class="text-light">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>تابعنا</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3">فيسبوك</a>
+                        <a href="#" class="text-light me-3">تويتر</a>
+                        <a href="#" class="text-light me-3">إنستغرام</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2023 دليل الفعاليات. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal لمعرض الصور -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">معرض الصور</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="صورة معرض" class="img-fluid" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="aseets/js/main.js"></script>
+</body>
+
+</html>
